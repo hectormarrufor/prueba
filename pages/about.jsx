@@ -1,12 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
+import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function About() {
   return (
     <>
       <Head>
@@ -42,7 +42,7 @@ export default function Home() {
 
         <div className={styles.center}>
           <h1>ABOUT</h1>
-          <Link href="/" legacyBehavior><a> HOME</a></Link>
+          <Link href="/" legacyBehavior><a>about</a></Link>
           <div className={styles.thirteen}>
             <Image
               src="/thirteen.svg"
