@@ -7,13 +7,21 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "up": "docker compose up --build --force-recreate",
-    "down": "docker compose down"
+    "up": "docker compose up -d",
+    "down": "docker compose down",
+    "less": " less-watch-compiler less styles index.less"
   },
   "dependencies": {
     "@next/font": "13.1.6",
+
+    "less": "^4.1.3",
+    "less-watch-compiler": "^1.16.3",
+
+    "mongoose": "^6.10.0",
+
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+
   }
 }

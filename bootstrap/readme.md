@@ -1,0 +1,1 @@
+Importar todos los archivos a excepcion del js en el componente raiz del proyecto. El js en next se importa con el componente <Script src=''> al final del renderizado del componente raiz
