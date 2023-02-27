@@ -19,10 +19,8 @@ const Navbar = () => {
             if (prevScrollpos > currentScrollPos) {
                 if (topValue != 0) setTopValue('0');
 
-                console.log(topValue);
             } else {
                 if (topValue == 0) setTopValue('-130px');
-                console.log(topValue);
             }
             prevScrollpos = currentScrollPos;
         }
@@ -32,7 +30,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg  nav" style={{ top: topValue }}>
+            <nav className="navbar navbar-expand-md  nav" style={{ top: topValue }}>
                 <div className="container-fluid p-2 d-flex justify-content-between">
                     <Link className="navbar-brand" href="/">NailsByMariangeles</Link>
                     <button className="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,25 +42,15 @@ const Navbar = () => {
                         
                         <div className="col ul-container">
                             <ul className="navbar-nav  mb-2 mb-lg-0">
-                                {/* <li className="nav-item dropdown nav-link">
-                                    <button className="nav-link dropdown-toggle btn-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Tools
-                                    </button>
-                                    <ul className="dropdown-menu">
-                                        <li><a className="dropdown-item" href="#">Action</a></li>
-                                        <li><a className="dropdown-item" href="#">Another action</a></li>
-                                        <li><hr className="dropdown-divider" /></li>
-                                        <li><a className="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
-                                </li> */}
+                           
                                 <li className="nav-item">
-                                    <Link className="nav-link " aria-current="page" href="/">
-                                        <button className={router.pathname === '/' ? "btn-secondary active" : 'btn-secondary'}>Apartar una cita</button>
+                                    <Link className="nav-link " aria-current="page" href="/appoint">
+                                        <button className={router.pathname === '/appoint' ? "btn-secondary active" : 'btn-secondary'}>Agendar una cita</button>
                                     </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link " aria-current="page" href="/">
-                                        <button className={router.pathname === '/' ? "btn-secondary active" : 'btn-secondary'}>Precios</button>
+                                    <Link className="nav-link " aria-current="page" href="/rate">
+                                        <button className={router.pathname === '/rate' ? "btn-secondary active" : 'btn-secondary'}>Dejar una Reseña</button>
                                     </Link>
                                 </li>
                                 <li className="nav-item">

@@ -3,17 +3,21 @@ import carousel_1 from '../assets/Carousel-1.jpeg';
 import carousel_2 from '../assets/Carousel-2.jpeg';
 import carousel_3 from '../assets/Carousel-3.jpeg';
 import { Inter } from '@next/font/google'
-import Link from 'next/link'
 import Image from 'next/image';
+import profile_pic from '../assets/mi-pic.jpg';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAllClients } from '@/redux/slices/clientSlice';
+import axios from 'axios';
 
 
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const dispatch = useDispatch();
+  const clientList = useSelector(state => state.clientReducer.clientList);
   
-
-
+  
   return (
     <>
       <div className='viewport container-fluid text-center  px-0'>
@@ -60,18 +64,42 @@ export default function Home() {
           </div>
         </div>
         <div className="row">
-          <div className="col-8">
-            <h2 >This is the home page</h2>
+            <div className='col container card p-5 m-5'>
+              <h2>Algunas reseñas de mis clientes</h2>
+              <div className='rating-list d-flex flex-row'>
+              <div className="rating-card m-4">
+                <div className="card-image"><Image src ={profile_pic} alt="..."/></div>
+                <div className="heading"> Espectaculares resultados! encantada con el cafecito del marido
+                <div className="author"> By <span className="name">Maria Ramirez</span> 4 days ago</div>
+              </div>
           </div>
-          <div className="col-4">
-            <button className='btn-warning'>hola</button>
+              <div className="rating-card m-4">
+                <div className="card-image"><Image src ={profile_pic} alt="..."/></div>
+                <div className="heading"> Espectaculares resultados! encantada con el cafecito del marido
+                <div className="author"> By <span className="name">Maria Ramirez</span> 4 days ago</div>
+              </div>
           </div>
-        </div>
-        <div className="row">
-          <input type='textarea' className='col textarea' />
-          <div className="col">
-            <button type='button' className='btn-success'>Prueba 2</button>
+              <div className="rating-card m-4">
+                <div className="card-image"><Image src ={profile_pic} alt="..."/></div>
+                <div className="heading"> Espectaculares resultados! encantada con el cafecito del marido
+                <div className="author"> By <span className="name">Maria Ramirez</span> 4 days ago</div>
+              </div>
           </div>
+              <div className="rating-card m-4">
+                <div className="card-image"><Image src ={profile_pic} alt="..."/></div>
+                <div className="heading"> Espectaculares resultados! encantada con el cafecito del marido
+                <div className="author"> By <span className="name">Maria Ramirez</span> 4 days ago</div>
+              </div>
+          </div>
+              <div className="rating-card m-4">
+                <div className="card-image"><Image src ={profile_pic} alt="..."/></div>
+                <div className="heading"> Espectaculares resultados! encantada con el cafecito del marido
+                <div className="author"> By <span className="name">Maria Ramirez</span> 4 days ago</div>
+              </div>
+          </div>
+              </div>
+            <button className='btn-secondary'>Ver todas</button>
+            </div>
         </div>
       </div>
     </>
